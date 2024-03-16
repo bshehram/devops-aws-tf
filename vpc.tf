@@ -2,7 +2,7 @@
 #
 
 module "network_dev" {
-  source = "../devops-aws-tf-modules/network"
+  source = "../devops-aws-tf-modules"
 
   optional_prefix       = "dev-"
   availability_zones    = var.availability_zones
@@ -13,7 +13,7 @@ module "network_dev" {
 }
 
 module "network_stg" {
-  source = "../devops-aws-tf-modules/network"
+  source = "../devops-aws-tf-modules"
 
   optional_prefix       = "stg-"
   availability_zones    = var.availability_zones
@@ -24,7 +24,7 @@ module "network_stg" {
 }
 
 module "network_prd" {
-  source = "../devops-aws-tf-modules/network"
+  source = "../devops-aws-tf-modules"
 
   optional_prefix       = "prd-"
   availability_zones    = var.availability_zones
