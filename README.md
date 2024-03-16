@@ -1,6 +1,11 @@
-### Network Terraform configuration for an AWS account that creates 3 VPCs - dev, stg and prd with public, private and internal subnets for all 4 regions in us-west-2.
+### Network Terraform configuration for an AWS account that creates 3 VPCs - dev, stg and prd with public, private and internal subnets for all 4 regions in us-west-2 using the devops-aws-tf-modules Terraform module.
 
-#### Requires Terraform v0.14.7
+## Compatibility
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.15.0 |
+| aws | >= 3.5.0 |
 
 ```
 # vpcs
