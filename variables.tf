@@ -12,6 +12,10 @@ variable "networks_prd" {
   type = map(string)
 }
 
+variable "endpoint_region" {
+  type = string
+}
+
 variable "availability_zones" {
   type = list(string)
 }
