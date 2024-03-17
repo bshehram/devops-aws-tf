@@ -17,7 +17,7 @@ aws s3api put-public-access-block --bucket your-terraform-state-bucket --public-
 aws s3api put-bucket-encryption --bucket your-terraform-state-bucket --server-side-encryption-configuration '{"Rules":[{"ApplyServerSideEncryptionByDefault":{"SSEAlgorithm":"AES256"}}]}' |
 ```
 
-## Sample `terraform apply` and `terraform destroy` Output (255 Total Resources)
+## Sample `terraform apply` and `terraform destroy` Output
 
 | Command | Sample Output |
 |---------|---------------|
