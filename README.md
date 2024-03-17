@@ -1,4 +1,11 @@
-### Network Terraform configuration for an AWS account that creates 3 VPCs - dev, stg and prd with public, private and internal subnets for all 4 regions in us-west-2 using the devops-aws-tf-modules Terraform module.
+# Network Terraform 
+### A configuration set for an AWS account that deploys 3 VPCs - dev, stg and prd with public, private and internal subnets for all 4 regions in us-west-2 using the [devops-aws-tf-modules](https://github.com/bshehram/devops-aws-tf-modules) Terraform module.
+
+## Usage
+
+- 1. Ensure your AWS credentials are set and the main.tf is using your choice of backend (local is default).
+- 2. Determine your network ranges/layout (see Network description below) and update the vpc.auto.tfvars file, if needed (us-west-2 zones are default).
+- 3. Run `terraform apply` and it should end up creating 255 resources (as currently configured).
 
 ## Compatibility
 
@@ -17,7 +24,7 @@ aws s3api put-public-access-block --bucket your-terraform-state-bucket --public-
 aws s3api put-bucket-encryption --bucket your-terraform-state-bucket --server-side-encryption-configuration '{"Rules":[{"ApplyServerSideEncryptionByDefault":{"SSEAlgorithm":"AES256"}}]}' |
 ```
 
-## Sample `terraform apply` and `terraform destroy` Output
+## Sample `terraform apply` and `terraform destroy` output
 
 | Command | Sample Output |
 |---------|---------------|
