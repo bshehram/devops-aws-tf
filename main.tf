@@ -9,9 +9,9 @@ terraform {
 #     dynamodb_table = "your-lock-table"             # DynamoDB table for state locking, replace with your table name
 #   }
 
-#   backend "local" {
-#     path = "path/to/your/terraform.tfstate"        # Path to your local state file
-#   }
+  backend "local" {
+    path = "./terraform.tfstate"        # Path to your local state file
+  }
 
 }
 
