@@ -1,5 +1,5 @@
-# Network Terraform 
-### A configuration set for an AWS account that deploys 3 VPCs - dev, stg and prd with public, private and internal subnets for all 4 regions in us-west-2 using the [devops-aws-tf-modules](https://github.com/bshehram/devops-aws-tf-modules) Terraform module.
+# DevOps AWS Terraform
+### A Terraform configuration set for an AWS account that deploys 3 VPCs - dev, stg and prd with public, private and internal subnets for all 4 regions in us-west-2 using the [devops-aws-tf-modules](https://github.com/bshehram/devops-aws-tf-modules) Terraform module.
 
 ## Usage
 
