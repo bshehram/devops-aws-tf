@@ -5,7 +5,20 @@
 | Name | Version |
 |------|---------|
 | terraform | >= 1.7.5 |
-| aws | >= 3.5.0 |
+| aws | >= 5.41.0 |
+
+## main.tf S3 and DynamoDB setup commands
+
+```
+aws dynamodb create-table --table-name YourTableName --attribute-definitions AttributeName=LockID,AttributeType=S --key-schema AttributeName=LockID,KeyType=HASH --billing-mode PAY_PER_REQUEST --region us-west-2 |
+aws s3api create-bucket --bucket your-terraform-state-bucket --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2 |
+aws s3api put-bucket-versioning --bucket your-terraform-state-bucket --versioning-configuration Status=Enabled |
+aws s3api put-public-access-block --bucket your-terraform-state-bucket --public-access-block-configuration "BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true" |
+aws s3api put-bucket-encryption --bucket your-terraform-state-bucket --server-side-encryption-configuration '{"Rules":[{"ApplyServerSideEncryptionByDefault":{"SSEAlgorithm":"AES256"}}]}' |
+```
+
+
+## Network description
 
 ```
 # vpcs
