@@ -4,7 +4,7 @@
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.15.0 |
+| terraform | >= 1.7.5 |
 | aws | >= 3.5.0 |
 
 ```
