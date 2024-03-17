@@ -7,7 +7,7 @@
 | terraform | >= 1.7.5 |
 | aws | >= 5.41.0 |
 
-## main.tf S3 and DynamoDB setup commands
+## (optional if using s3 backend) main.tf S3 and DynamoDB setup commands
 
 ```
 aws dynamodb create-table --table-name YourTableName --attribute-definitions AttributeName=LockID,AttributeType=S --key-schema AttributeName=LockID,KeyType=HASH --billing-mode PAY_PER_REQUEST --region us-west-2 |
@@ -17,6 +17,12 @@ aws s3api put-public-access-block --bucket your-terraform-state-bucket --public-
 aws s3api put-bucket-encryption --bucket your-terraform-state-bucket --server-side-encryption-configuration '{"Rules":[{"ApplyServerSideEncryptionByDefault":{"SSEAlgorithm":"AES256"}}]}' |
 ```
 
+## Sample `terraform apply` and `terraform destroy` Output (255 Total Resources)
+
+| Command | Sample Output |
+|---------|---------------|
+| apply   | [SAMPLE_TF_APPLY.md](SAMPLE_TF_APPLY.md) |
+| destroy | [SAMPLE_TF_DESTROY.md](SAMPLE_TF_DESTROY.md) |
 
 ## Network description
 
